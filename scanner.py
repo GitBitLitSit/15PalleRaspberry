@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import threading
 import os
-from pyzbar.pyzbar import decode
+from pyzbar.pyzbar import decode, ZBarSymbol
 from picamera2 import Picamera2
 from dotenv import load_dotenv
 
@@ -73,7 +73,7 @@ def main():
             # 2. REMOVED: cv2.imshow and cv2.waitKey (Requires Monitor)
             # We only decode, we don't display.
             
-            decoded_objects = decode(frame)
+            decoded_objects = decode(frame, symbols=[ZBarSymbol.QRCODE])
 
             for obj in decoded_objects:
                 try:
