@@ -58,6 +58,7 @@ def main():
         )
         picam2.configure(config)
         picam2.start()
+        picam2.set_controls({"AfMode": 2, "AfRange": 2})
         print("[**] Scanner is running! (Background mode)")
 
     except Exception as e:
