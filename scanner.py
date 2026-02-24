@@ -18,7 +18,7 @@ if not API_KEY or not API_URL:
     print("[!!] Error: API_KEY or API_URL not found in .env file")
     exit(1)
 
-COOLDOWN_SECONDS = 3.0
+COOLDOWN_SECONDS = 2.0
 last_scan_time = 0
 last_scanned_data = ""
 
