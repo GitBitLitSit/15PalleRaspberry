@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 #!/bin/bash
 
 # --- CONFIGURATION ---
