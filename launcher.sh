@@ -24,7 +24,7 @@ git pull origin master || echo "[Launcher] Git pull failed, using local version.
 # 4. Set up Virtual Environment (Fixes the Python crash)
 echo "[Launcher] Setting up virtual environment..."
 if [ ! -d "venv" ]; then
-    python3 -m venv venv
+    python3 -m venv --system-site-packages venv
 fi
 # Activate the virtual environment
 source venv/bin/activate

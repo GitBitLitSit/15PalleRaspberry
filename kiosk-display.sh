@@ -52,5 +52,5 @@ exec "${CHROME[@]}" \
   --disable-features=Translate,TranslateUI \
   --check-for-update-interval=31536000 \
   --password-store=basic \
-  --force-device-scale-factor=0.75
+  --force-device-scale-factor=0.75 \
   "$KIOSK_URL"
