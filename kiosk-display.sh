@@ -42,6 +42,11 @@ fi
 
 echo "[kiosk-display] Starting fullscreen kiosk..."
 
+# Hide the mouse cursor (if unclutter is installed)
+if command -v unclutter &>/dev/null; then
+  unclutter -idle 1 -root &
+fi
+
 # Added crash flags to keep the UI clean
 exec "${CHROME[@]}" \
   --kiosk \
@@ -49,6 +54,7 @@ exec "${CHROME[@]}" \
   --disable-infobars \
   --disable-session-crashed-bubble \
   --disable-restore-session-state \
+  --disable-translate \
   --disable-features=Translate,TranslateUI \
   --check-for-update-interval=31536000 \
   --password-store=basic \
