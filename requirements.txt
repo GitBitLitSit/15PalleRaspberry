@@ -1,6 +1,5 @@
 python-dotenv
 requests
-opencv-python-headless
 pyzbar
 numpy
 picamera2 
