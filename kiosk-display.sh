@@ -51,4 +51,5 @@ exec "${CHROME[@]}" \
   --disable-restore-session-state \
   --disable-features=Translate \
   --check-for-update-interval=31536000 \
+  --password-store=basic \
   "$KIOSK_URL"
