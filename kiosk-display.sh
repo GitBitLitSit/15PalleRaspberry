@@ -49,7 +49,8 @@ exec "${CHROME[@]}" \
   --disable-infobars \
   --disable-session-crashed-bubble \
   --disable-restore-session-state \
-  --disable-features=Translate \
+  --disable-features=Translate,TranslateUI \
   --check-for-update-interval=31536000 \
   --password-store=basic \
+  --force-device-scale-factor=0.75
   "$KIOSK_URL"
